@@ -374,7 +374,8 @@
     transition:border-color .2s ease;
   }
   .gameplay-grid > *:hover{border-color:var(--teal);}
-  .gameplay-grid img{
+  .gameplay-grid img,
+  .gameplay-grid video{
     width:100%;
     height:100%;
     object-fit:cover;
@@ -383,7 +384,8 @@
     border:none;
     border-radius:0;
   }
-  .gameplay-grid > *:hover img{transform:scale(1.05);}
+  .gameplay-grid > *:hover img,
+  .gameplay-grid > *:hover video{transform:scale(1.05);}
   @media(max-width:700px){
     .gameplay-grid{grid-template-columns:1fr;}
   }
@@ -547,7 +549,7 @@
   <section class="section" style="padding-bottom:0;">
     <div class="eyebrow">Gameplay</div>
     <div class="gameplay-grid gameplay-grid-3 fade-in">
-      <img src="gameplay-reference.png" alt="Captura de gameplay de WebFisher" class="gameplay-main">
+      <video class="gameplay-main" src="gameplay-loop.mp4" autoplay loop muted playsinline></video>
       <img src="gameplay-1.jpg" alt="Pescando en el muelle">
       <img src="gameplay-2.jpg" alt="Pescando con amigos en el bosque">
     </div>
