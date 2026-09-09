@@ -302,6 +302,69 @@
   .cta-final p{color:var(--muted); max-width:520px; margin:0 auto 30px;}
   .cta-final .cta-row{justify-content:center;}
 
+  .roadmap{
+    max-width:900px;
+    margin:40px auto 0;
+    padding:0 40px;
+    text-align:left;
+    position:relative;
+  }
+  .roadmap::before{
+    content:'';
+    position:absolute;
+    left:59px;
+    top:8px;
+    bottom:8px;
+    width:2px;
+    background:linear-gradient(var(--border), var(--border));
+  }
+  .roadmap-item{
+    display:grid;
+    grid-template-columns:80px 1fr;
+    gap:24px;
+    padding-bottom:36px;
+    position:relative;
+  }
+  .roadmap-item:last-child{padding-bottom:0;}
+  .roadmap-dot-col{display:flex; justify-content:center; position:relative;}
+  .roadmap-dot{
+    width:16px; height:16px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--border);
+    margin-top:4px;
+    z-index:1;
+    transition:border-color .2s ease, background .2s ease;
+  }
+  .roadmap-item.done .roadmap-dot{background:var(--teal); border-color:var(--teal); box-shadow:0 0 12px rgba(45,212,191,0.5);}
+  .roadmap-item.progress .roadmap-dot{background:var(--blue); border-color:var(--blue); box-shadow:0 0 12px rgba(56,189,248,0.5);}
+  .roadmap-card{
+    background:var(--bg-panel);
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:20px 24px;
+    transition:border-color .2s ease, transform .2s ease;
+  }
+  .roadmap-card:hover{border-color:var(--teal); transform:translateX(2px);}
+  .roadmap-tag{
+    display:inline-block;
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:0.4px;
+    padding:3px 10px;
+    border-radius:999px;
+    margin-bottom:10px;
+  }
+  .roadmap-item.done .roadmap-tag{background:rgba(34,197,94,0.14); color:var(--green);}
+  .roadmap-item.progress .roadmap-tag{background:rgba(56,189,248,0.14); color:var(--blue);}
+  .roadmap-item.planned .roadmap-tag{background:rgba(148,163,184,0.14); color:var(--muted);}
+  .roadmap-card h3{font-size:17px; margin-bottom:6px;}
+  .roadmap-card p{color:var(--muted); font-size:14px; line-height:1.55;}
+  @media(max-width:600px){
+    .roadmap::before{left:39px;}
+    .roadmap-item{grid-template-columns:40px 1fr; gap:14px;}
+  }
+
   .partners{
     max-width:1400px;
     margin:0 auto;
@@ -603,6 +666,54 @@
       </div>
       <h3 data-es="Eventos y Torneos" data-en="Events and Tournaments">Eventos y Torneos</h3>
       <p data-es="Participa en eventos de temporada y torneos de pesca para ganar premios y cosméticos exclusivos." data-en="Take part in seasonal events and fishing tournaments to win prizes and exclusive cosmetics.">Participa en eventos de temporada y torneos de pesca para ganar premios y cosméticos exclusivos.</p>
+    </div>
+  </div>
+
+  <section class="section" style="padding-top:20px;">
+    <div class="eyebrow">Roadmap</div>
+    <h2 data-es="¿Qué sigue para WEBFISHER?" data-en="What's next for WEBFISHER?">¿Qué sigue para WEBFISHER?</h2>
+  </section>
+
+  <div class="roadmap fade-in">
+    <div class="roadmap-item done">
+      <div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+      <div class="roadmap-card">
+        <span class="roadmap-tag" data-es="LANZADO" data-en="RELEASED">LANZADO</span>
+        <h3 data-es="Lanzamiento v1.0" data-en="v1.0 Launch">Lanzamiento v1.0</h3>
+        <p data-es="El juego base con casi 100 criaturas, multijugador online y personalización de personaje." data-en="The core game with almost 100 creatures, online multiplayer and character customization.">El juego base con casi 100 criaturas, multijugador online y personalización de personaje.</p>
+      </div>
+    </div>
+    <div class="roadmap-item progress">
+      <div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+      <div class="roadmap-card">
+        <span class="roadmap-tag" data-es="EN PROGRESO" data-en="IN PROGRESS">EN PROGRESO</span>
+        <h3 data-es="Nuevos mapas y zonas secretas" data-en="New maps and secret spots">Nuevos mapas y zonas secretas</h3>
+        <p data-es="Playas, ríos nocturnos y áreas escondidas con especies exclusivas por descubrir." data-en="Beaches, night rivers and hidden areas with exclusive species to discover.">Playas, ríos nocturnos y áreas escondidas con especies exclusivas por descubrir.</p>
+      </div>
+    </div>
+    <div class="roadmap-item progress">
+      <div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+      <div class="roadmap-card">
+        <span class="roadmap-tag" data-es="EN PROGRESO" data-en="IN PROGRESS">EN PROGRESO</span>
+        <h3 data-es="Eventos de temporada" data-en="Seasonal events">Eventos de temporada</h3>
+        <p data-es="Torneos de pesca por tiempo limitado con premios y cosméticos exclusivos." data-en="Limited-time fishing tournaments with exclusive prizes and cosmetics.">Torneos de pesca por tiempo limitado con premios y cosméticos exclusivos.</p>
+      </div>
+    </div>
+    <div class="roadmap-item planned">
+      <div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+      <div class="roadmap-card">
+        <span class="roadmap-tag" data-es="PRÓXIMAMENTE" data-en="PLANNED">PRÓXIMAMENTE</span>
+        <h3 data-es="Casas y decoración" data-en="Houses and decoration">Casas y decoración</h3>
+        <p data-es="Consigue tu propia cabaña junto al lago y decórala con lo que vayas pescando." data-en="Get your own cabin by the lake and decorate it with what you fish up.">Consigue tu propia cabaña junto al lago y decórala con lo que vayas pescando.</p>
+      </div>
+    </div>
+    <div class="roadmap-item planned">
+      <div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+      <div class="roadmap-card">
+        <span class="roadmap-tag" data-es="PRÓXIMAMENTE" data-en="PLANNED">PRÓXIMAMENTE</span>
+        <h3 data-es="Soporte para Mac" data-en="Mac support">Soporte para Mac</h3>
+        <p data-es="Estamos evaluando llevar WEBFISHER a macOS después del lanzamiento estable en PC." data-en="We're evaluating bringing WEBFISHER to macOS after the stable PC launch.">Estamos evaluando llevar WEBFISHER a macOS después del lanzamiento estable en PC.</p>
+      </div>
     </div>
   </div>
 
