@@ -6,7 +6,7 @@
 <meta http-equiv="content-language" content="es">
 
 <title>WebFisher — Relájate y Pesca con Amigos</title>
-<meta name="description" content="WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes. Gratis y online.">
+<meta name="description" content="Multiplayer chatroom-focused fishing game! Relax and fish. WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes.">
 <meta name="author" content="lamedeveloper">
 <meta name="robots" content="index, follow">
 
@@ -16,16 +16,16 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://webfiisher.com/">
 <meta property="og:title" content="WebFisher — Relájate y Pesca con Amigos">
-<meta property="og:description" content="WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes. Gratis y online.">
-<meta property="og:image" content="https://webfiisher.com/logo.png">
+<meta property="og:description" content="Multiplayer chatroom-focused fishing game! Relax and fish. WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes.">
+<meta property="og:image" content="https://webfiisher.com/share-image.png">
 <meta property="og:site_name" content="WebFisher">
 <meta property="og:locale" content="es_ES">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://webfiisher.com/">
 <meta name="twitter:title" content="WebFisher — Relájate y Pesca con Amigos">
-<meta name="twitter:description" content="WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes. Gratis y online.">
-<meta name="twitter:image" content="https://webfiisher.com/logo.png">
+<meta name="twitter:description" content="Multiplayer chatroom-focused fishing game! Relax and fish. WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes.">
+<meta name="twitter:image" content="https://webfiisher.com/share-image.png">
 
 <meta name="theme-color" content="#030609">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -49,7 +49,7 @@
       "name": "WebFisher",
       "description": "WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes.",
       "url": "https://webfiisher.com/",
-      "image": "https://webfiisher.com/logo.png",
+      "image": "https://webfiisher.com/share-image.png",
       "genre": ["Casual", "Multiplayer", "Fishing", "Social"],
       "gamePlatform": ["PC"],
       "applicationCategory": "Game",
@@ -363,9 +363,11 @@
   .gameplay-grid-3 .gameplay-main{
     grid-column:1 / -1;
     aspect-ratio:16/8;
+    order:0;
   }
   .gameplay-grid-3 img:not(.gameplay-main){
     aspect-ratio:16/12;
+    order:1;
   }
   .gameplay-grid > *{
     overflow:hidden;
@@ -633,6 +635,13 @@
   </footer>
 
   <script>
+    // Asegurar autoplay del video de gameplay en todos los navegadores (Safari lo exige por JS)
+    const gameplayVideo = document.querySelector('.gameplay-main');
+    if (gameplayVideo && gameplayVideo.tagName === 'VIDEO'){
+      gameplayVideo.muted = true;
+      gameplayVideo.play().catch(() => {});
+    }
+
     // Contadores en vivo: pescadores activos (90-200) y peces capturados (3000-5000)
     // La velocidad de cambio también es aleatoria: a veces rápido, a veces lento
     const fisherEl = document.getElementById('fisher-count');
