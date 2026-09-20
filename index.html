@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-language" content="es">
+
+<title>WebFisher — Relájate y Pesca con Amigos</title>
+<meta name="description" content="WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes. Descarga gratis.">
+<meta name="author" content="lamedeveloper">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webfiisher.com/">
+<link rel="icon" type="image/png" href="/logo.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://webfiisher.com/">
+<meta property="og:title" content="WebFisher — Relájate y Pesca con Amigos">
+<meta property="og:description" content="Juego de pesca multijugador: relájate, socializa y atrapa casi 100 criaturas diferentes.">
+<meta property="og:image" content="https://webfiisher.com/share-image.png">
+<meta property="og:site_name" content="WebFisher">
+<meta property="og:locale" content="es_ES">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://webfiisher.com/">
+<meta name="twitter:title" content="WebFisher — Relájate y Pesca con Amigos">
+<meta name="twitter:description" content="Juego de pesca multijugador: relájate, socializa y atrapa casi 100 criaturas diferentes.">
+<meta name="twitter:image" content="https://webfiisher.com/share-image.png">
+
+<meta name="theme-color" content="#030609">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WebFisher">
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+  {"@type":"WebSite","@id":"https://webfiisher.com/#website","name":"WebFisher","url":"https://webfiisher.com/","inLanguage":"es","publisher":{"@id":"https://webfiisher.com/#organization"}},
+  {"@type":"VideoGame","@id":"https://webfiisher.com/#game","name":"WebFisher","description":"WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes.","url":"https://webfiisher.com/","image":"https://webfiisher.com/share-image.png","genre":["Casual","Multiplayer","Fishing","Social"],"gamePlatform":["PC"],"applicationCategory":"Game","operatingSystem":"Windows","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"publisher":{"@id":"https://webfiisher.com/#organization"}},
+  {"@type":"Organization","@id":"https://webfiisher.com/#organization","name":"lamedeveloper","url":"https://webfiisher.com/","logo":"https://webfiisher.com/logo.png"}
+]}
+</script>
+</head>
+<body>
+
+<div class="statusbar">
+  <span><span class="dot"></span><strong class="server-label" data-es="SERVIDORES ONLINE" data-en="SERVERS ONLINE">SERVIDORES ONLINE</strong></span>
+  <span><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M17 20C17 17.2386 14.7614 15 12 15C9.23858 15 7 17.2386 7 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="9" r="3.5" stroke="currentColor" stroke-width="1.6"/></svg>
+    <strong id="fisher-count">144</strong> <span class="label-text" data-es="pescadores activos" data-en="active anglers">pescadores activos</span></span>
+  <span><svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 12C3 12 7 6 13 6C17 6 20 9 21 12C20 15 17 18 13 18C7 18 3 12 3 12Z" stroke="currentColor" stroke-width="1.6"/></svg>
+    <strong id="fish-count">4,621</strong> <span class="label-text" data-es="¡peces capturados hoy!" data-en="fish caught today!">¡peces capturados hoy!</span></span>
+</div>
+
+<header class="site-header">
+  <a href="/" class="logo"><div class="logo-icon"><img src="/logo.png" alt="WebFisher"></div>WEBFISHER</a>
+  <nav class="site-nav" aria-label="Navegación principal">
+    <a href="#gameplay" data-es="Gameplay" data-en="Gameplay">Gameplay</a>
+    <a href="#requisitos" data-es="Requisitos" data-en="Requirements">Requisitos</a>
+    <a href="#changelog" data-es="Updates" data-en="Updates">Updates</a>
+    <a href="#faq" data-es="FAQ" data-en="FAQ">FAQ</a>
+    <a href="#comunidad" data-es="Comunidad" data-en="Community">Comunidad</a>
+    <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+  </nav>
+  <div class="header-right">
+    <div class="lang" id="lang-toggle" role="button" tabindex="0" aria-label="Cambiar idioma">
+      <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M3 5H11M7 3V5M7 5C7 8 5.5 10.5 3 12M5 9.5C5.5 10.8 6.8 12.2 9 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/><path d="M13 21L16.5 12H17.5L21 21" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+      <strong id="lang-label">ES</strong>
+    </div>
+    <div id="auth-area"></div>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <div class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none"><rect x="2.5" y="8" width="19" height="9" rx="4" stroke="currentColor" stroke-width="1.6"/></svg><span data-es="¡Juego GRATIS!" data-en="FREE Game!">¡Juego GRATIS!</span></div>
+    <h1 data-es="Relájate y Pesca<br>con Amigos" data-en="Relax and Fish<br>with Friends">Relájate y Pesca<br>con Amigos</h1>
+    <p class="sub" data-es="WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes." data-en="WEBFISHER is a multiplayer fishing game where you relax, socialize and catch almost 100 different creatures.">WEBFISHER es un juego de pesca multijugador donde te relajas, socializas y atrapas casi 100 criaturas diferentes.</p>
+    <div class="cta-row">
+      <button type="button" class="btn btn-primary" data-download-trigger>
+        <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 4V15M12 15L8 11M12 15L16 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <span data-es="Descargar Gratis" data-en="Download Free">Descargar Gratis</span>
+      </button>
+      <button type="button" class="btn btn-outline" data-auth-open-register data-es="Crear cuenta" data-en="Create account">Crear cuenta</button>
+    </div>
+    <div class="checks">
+      <div class="check-pill gratis"><span data-es="GRATIS" data-en="FREE">GRATIS</span></div>
+      <div class="check-pill"><span data-es="Online" data-en="Online">Online</span></div>
+      <div class="check-pill"><span data-es="Casual" data-en="Casual">Casual</span></div>
+    </div>
+  </div>
+  <div class="hero-art fade-in">
+    <video src="/gameplay-loop.mp4" autoplay loop muted playsinline preload="metadata"></video>
+  </div>
+</section>
+
+<!-- Descripción del juego -->
+<section class="section" id="descripcion">
+  <div class="eyebrow" data-es="Sobre el juego" data-en="About the game">Sobre el juego</div>
+  <h2 data-es="¿Qué es WEBFISHER?" data-en="What is WEBFISHER?">¿Qué es WEBFISHER?</h2>
+  <p class="lead" data-es="WEBFISHER es un juego de pesca social y relajante directamente en tu navegador. Explora lagos, ríos y playas, conoce a otros pescadores y colecciona casi 100 especies distintas mientras subes de nivel tu equipo." data-en="WEBFISHER is a relaxing, social fishing game right in your browser. Explore lakes, rivers and beaches, meet other anglers and collect almost 100 different species while upgrading your gear.">WEBFISHER es un juego de pesca social y relajante directamente en tu navegador. Explora lagos, ríos y playas, conoce a otros pescadores y colecciona casi 100 especies distintas mientras subes de nivel tu equipo.</p>
+</section>
+
+<!-- Screenshots / Gallery -->
+<section class="section" id="gameplay" style="padding-bottom:0;">
+  <div class="eyebrow">Gameplay</div>
+  <h2 data-es="Capturas del juego" data-en="Game screenshots">Capturas del juego</h2>
+  <div class="gameplay-grid gameplay-grid-3 fade-in">
+    <img src="/gameplay-1.jpg" alt="Captura de gameplay de WebFisher" class="gameplay-main" loading="lazy" width="1200" height="600">
+    <img src="/gameplay-3.jpg" alt="Pescando en el muelle" loading="lazy" width="600" height="450">
+    <img src="/gameplay-2.jpg" alt="Pescando con amigos en el bosque" loading="lazy" width="600" height="450">
+  </div>
+</section>
+
+<!-- Trailer -->
+<section class="section" id="trailer">
+  <div class="eyebrow" data-es="Tráiler" data-en="Trailer">Tráiler</div>
+  <h2 data-es="Mira WEBFISHER en acción" data-en="Watch WEBFISHER in action">Mira WEBFISHER en acción</h2>
+  <div class="trailer-wrap fade-in">
+    <video src="/gameplay-loop.mp4" controls preload="metadata" poster="/hero-new.png"></video>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" style="padding-top:20px;">
+  <h2 data-es="¿Por qué jugar WEBFISHER?" data-en="Why play WEBFISHER?">¿Por qué jugar WEBFISHER?</h2>
+</section>
+<div class="features">
+  <div class="feature-card fade-in"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12C3 12 7 6 13 6C17 6 20 9 21 12C20 15 17 18 13 18C7 18 3 12 3 12Z" stroke="currentColor" stroke-width="1.6"/></svg></div>
+    <h3 data-es="Atrapa Todo" data-en="Catch Everything">Atrapa Todo</h3>
+    <p data-es="Casi 100 criaturas diferentes para capturar, desde el caracol más pequeño hasta el tiburón más grande." data-en="Almost 100 different creatures to catch, from the smallest snail to the biggest shark.">Casi 100 criaturas diferentes para capturar, desde el caracol más pequeño hasta el tiburón más grande.</p></div>
+  <div class="feature-card fade-in"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M17 20C17 17.2386 14.7614 15 12 15C9.23858 15 7 17.2386 7 20" stroke="currentColor" stroke-width="1.6"/></svg></div>
+    <h3 data-es="Juega con Amigos" data-en="Play with Friends">Juega con Amigos</h3>
+    <p data-es="Conoce gente nueva, encuentra lugares ocultos y pesca junto a tus amigos." data-en="Meet new people, find hidden spots and fish alongside your friends.">Conoce gente nueva, encuentra lugares ocultos y pesca junto a tus amigos.</p></div>
+  <div class="feature-card fade-in"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3V13C6 15.2091 7.79086 17 10 17H14C16.2091 17 18 15.2091 18 13V3" stroke="currentColor" stroke-width="1.6"/></svg></div>
+    <h3 data-es="Mejora tu Equipo" data-en="Upgrade your Gear">Mejora tu Equipo</h3>
+    <p data-es="Mejora tu equipo con nuevos cebos, señuelos y cañas. Colecciona cosméticos." data-en="Upgrade your gear with new baits, lures and rods. Collect cosmetics.">Mejora tu equipo con nuevos cebos, señuelos y cañas. Colecciona cosméticos.</p></div>
+  <div class="feature-card fade-in"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="8" r="3.2" stroke="currentColor" stroke-width="1.6"/></svg></div>
+    <h3 data-es="Personaliza tu Pescador" data-en="Customize your Angler">Personaliza tu Pescador</h3>
+    <p data-es="Elige entre decenas de atuendos, sombreros y accesorios." data-en="Choose from dozens of outfits, hats and accessories.">Elige entre decenas de atuendos, sombreros y accesorios.</p></div>
+  <div class="feature-card fade-in"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M3 19C6 13 9 17 12 11C15 5 18 9 21 5" stroke="currentColor" stroke-width="1.6"/></svg></div>
+    <h3 data-es="Explora Nuevos Mapas" data-en="Explore New Maps">Explora Nuevos Mapas</h3>
+    <p data-es="Descubre lagos, ríos, playas y zonas secretas." data-en="Discover lakes, rivers, beaches and secret spots.">Descubre lagos, ríos, playas y zonas secretas.</p></div>
+  <div class="feature-card fade-in"><div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3L14.4 9H21L15.6 12.8L17.6 19L12 15.2L6.4 19L8.4 12.8L3 9H9.6L12 3Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+    <h3 data-es="Eventos y Torneos" data-en="Events and Tournaments">Eventos y Torneos</h3>
+    <p data-es="Participa en eventos de temporada y torneos de pesca." data-en="Take part in seasonal events and fishing tournaments.">Participa en eventos de temporada y torneos de pesca.</p></div>
+</div>
+
+<!-- Download / Play now -->
+<section class="cta-final fade-in" id="descargar">
+  <h2 data-es="¿Listo para empezar tu aventura de pesca?" data-en="Ready to start your fishing adventure?">¿Listo para empezar tu aventura de pesca?</h2>
+  <p data-es="Crea tu cuenta gratis y únete a miles de pescadores en línea. El juego es completamente GRATIS." data-en="Create your free account and join thousands of anglers online. The game is completely FREE.">Crea tu cuenta gratis y únete a miles de pescadores en línea. El juego es completamente GRATIS.</p>
+  <div class="cta-row" style="justify-content:center;">
+    <button type="button" class="btn btn-primary" data-download-trigger>
+      <svg class="icon" viewBox="0 0 24 24" fill="none"><path d="M12 4V15M12 15L8 11M12 15L16 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span data-es="Descargar Gratis" data-en="Download Free">Descargar Gratis</span>
+    </button>
+    <button type="button" class="btn btn-blue" data-auth-open-login data-es="Jugar Ahora" data-en="Play Now">Jugar Ahora</button>
+  </div>
+</section>
+
+<!-- Requisitos del sistema -->
+<section class="section" id="requisitos">
+  <div class="eyebrow" data-es="Requisitos" data-en="Requirements">Requisitos</div>
+  <h2 data-es="Requisitos del sistema" data-en="System requirements">Requisitos del sistema</h2>
+  <div class="req-grid">
+    <div class="req-card fade-in">
+      <h3 data-es="Mínimos" data-en="Minimum">Mínimos</h3>
+      <dl>
+        <dt>OS</dt><dd>Windows 10 (64-bit)</dd>
+        <dt>CPU</dt><dd>Intel i3 / Ryzen 3</dd>
+        <dt>RAM</dt><dd>4 GB</dd>
+        <dt>GPU</dt><dd>Integrada (Intel HD 620+)</dd>
+        <dt data-es="Almacenamiento" data-en="Storage">Almacenamiento</dt><dd>1 GB</dd>
+        <dt data-es="Internet" data-en="Internet">Internet</dt><dd data-es="Conexión de banda ancha" data-en="Broadband connection">Conexión de banda ancha</dd>
+      </dl>
+    </div>
+    <div class="req-card fade-in">
+      <h3 data-es="Recomendados" data-en="Recommended">Recomendados</h3>
+      <dl>
+        <dt>OS</dt><dd>Windows 11 (64-bit)</dd>
+        <dt>CPU</dt><dd>Intel i5 / Ryzen 5</dd>
+        <dt>RAM</dt><dd>8 GB</dd>
+        <dt>GPU</dt><dd>GTX 1050 / RX 560</dd>
+        <dt data-es="Almacenamiento" data-en="Storage">Almacenamiento</dt><dd>2 GB (SSD)</dd>
+        <dt data-es="Internet" data-en="Internet">Internet</dt><dd data-es="Fibra o cable, baja latencia" data-en="Fiber/cable, low latency">Fibra o cable, baja latencia</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- Roadmap / Updates -->
+<section class="section" id="changelog" style="padding-top:20px;">
+  <div class="eyebrow">Roadmap</div>
+  <h2 data-es="¿Qué sigue para WEBFISHER?" data-en="What's next for WEBFISHER?">¿Qué sigue para WEBFISHER?</h2>
+</section>
+<div class="roadmap fade-in">
+  <div class="roadmap-item done"><div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+    <div class="roadmap-card"><span class="roadmap-tag" data-es="LANZADO" data-en="RELEASED">LANZADO</span><h3 data-es="Beta Cerrada" data-en="Closed Beta">Beta Cerrada</h3><p data-es="Primeras pruebas con un grupo reducido de pescadores." data-en="Early testing with a small group of anglers.">Primeras pruebas con un grupo reducido de pescadores.</p></div></div>
+  <div class="roadmap-item done"><div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+    <div class="roadmap-card"><span class="roadmap-tag" data-es="LANZADO" data-en="RELEASED">LANZADO</span><h3 data-es="Lanzamiento v1.0" data-en="v1.0 Launch">Lanzamiento v1.0</h3><p data-es="El juego base con casi 100 criaturas y multijugador online." data-en="The core game with almost 100 creatures and online multiplayer.">El juego base con casi 100 criaturas y multijugador online.</p></div></div>
+  <div class="roadmap-item progress"><div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+    <div class="roadmap-card"><span class="roadmap-tag" data-es="EN PROGRESO" data-en="IN PROGRESS">EN PROGRESO</span><h3 data-es="Nuevos mapas y zonas secretas" data-en="New maps and secret spots">Nuevos mapas y zonas secretas</h3><p data-es="Playas, ríos nocturnos y áreas escondidas." data-en="Beaches, night rivers and hidden areas.">Playas, ríos nocturnos y áreas escondidas.</p></div></div>
+  <div class="roadmap-item planned"><div class="roadmap-dot-col"><div class="roadmap-dot"></div></div>
+    <div class="roadmap-card"><span class="roadmap-tag" data-es="PRÓXIMAMENTE" data-en="PLANNED">PRÓXIMAMENTE</span><h3 data-es="Casas y decoración" data-en="Houses and decoration">Casas y decoración</h3><p data-es="Consigue tu cabaña junto al lago y decórala." data-en="Get your cabin by the lake and decorate it.">Consigue tu cabaña junto al lago y decórala.</p></div></div>
+</div>
+
+<div class="changelog">
+  <div class="changelog-item fade-in"><span class="version">v1.0.0</span><span class="date">2024</span>
+    <ul><li data-es="Lanzamiento inicial con multijugador online." data-en="Initial release with online multiplayer.">Lanzamiento inicial con multijugador online.</li>
+    <li data-es="Casi 100 especies de peces disponibles." data-en="Almost 100 fish species available.">Casi 100 especies de peces disponibles.</li></ul>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section class="section" id="faq" style="padding-top:20px;">
+  <div class="eyebrow">FAQ</div>
+  <h2 data-es="Preguntas frecuentes" data-en="Frequently asked questions">Preguntas frecuentes</h2>
+</section>
+<div class="faq-list">
+  <details class="faq-item"><summary data-es="¿WEBFISHER es gratis?" data-en="Is WEBFISHER free?">¿WEBFISHER es gratis?</summary>
+    <p data-es="Sí, WEBFISHER es completamente gratis para descargar y jugar." data-en="Yes, WEBFISHER is completely free to download and play.">Sí, WEBFISHER es completamente gratis para descargar y jugar.</p></details>
+  <details class="faq-item"><summary data-es="¿En qué plataformas está disponible?" data-en="What platforms is it available on?">¿En qué plataformas está disponible?</summary>
+    <p data-es="Actualmente WEBFISHER está disponible para Windows. Soporte para Mac está en evaluación." data-en="WEBFISHER is currently available for Windows. Mac support is under evaluation.">Actualmente WEBFISHER está disponible para Windows. Soporte para Mac está en evaluación.</p></details>
+  <details class="faq-item"><summary data-es="¿Necesito una cuenta para jugar?" data-en="Do I need an account to play?">¿Necesito una cuenta para jugar?</summary>
+    <p data-es="Sí, necesitas crear una cuenta gratuita para guardar tu progreso y jugar en línea." data-en="Yes, you need a free account to save your progress and play online.">Sí, necesitas crear una cuenta gratuita para guardar tu progreso y jugar en línea.</p></details>
+  <details class="faq-item"><summary data-es="¿Cómo reporto un error?" data-en="How do I report a bug?">¿Cómo reporto un error?</summary>
+    <p data-es="Puedes reportar errores en nuestro Discord o desde el formulario de contacto." data-en="You can report bugs on our Discord or through the contact form.">Puedes reportar errores en nuestro Discord o desde el formulario de contacto.</p></details>
+</div>
+
+<!-- Partners -->
+<section class="partners">
+  <div class="eyebrow">Partners</div>
+  <h2 data-es="Creadores de contenido de la comunidad" data-en="Community content creators">Creadores de contenido de la comunidad</h2>
+  <div class="partner-box fade-in">
+    <div class="icon-box"><svg viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M15.8 15.8L20 20" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+    <h3 data-es="Actualmente buscando partners" data-en="Currently looking for partners">Actualmente buscando partners</h3>
+    <p data-es="Aún no tenemos creadores de contenido confirmados. Si te gustaría colaborar, contáctanos." data-en="We don't have confirmed content creators yet. If you'd like to collaborate, get in touch.">Aún no tenemos creadores de contenido confirmados. Si te gustaría colaborar, contáctanos.</p>
+  </div>
+</section>
+
+<!-- Discord / Comunidad -->
+<section class="section" id="comunidad">
+  <div class="eyebrow" data-es="Comunidad" data-en="Community">Comunidad</div>
+  <h2 data-es="Únete a la comunidad" data-en="Join the community">Únete a la comunidad</h2>
+  <div class="discord-card fade-in">
+    <p data-es="Habla con otros pescadores, comparte tus capturas y entérate de las novedades primero en Discord." data-en="Chat with other anglers, share your catches and hear about updates first on Discord.">Habla con otros pescadores, comparte tus capturas y entérate de las novedades primero en Discord.</p>
+    <a class="btn btn-blue" href="https://discord.gg/bdhQNf2Eev" target="_blank" rel="noopener noreferrer" data-es="Unirse al Discord" data-en="Join Discord">Unirse al Discord</a>
+  </div>
+</section>
+
+<!-- Contact / Support -->
+<section class="section" id="contacto">
+  <div class="eyebrow" data-es="Soporte" data-en="Support">Soporte</div>
+  <h2 data-es="Contacto" data-en="Contact">Contacto</h2>
+  <p class="lead" data-es="¿Tienes dudas, sugerencias o encontraste un error? Escríbenos." data-en="Have questions, suggestions or found a bug? Write to us.">¿Tienes dudas, sugerencias o encontraste un error? Escríbenos.</p>
+  <form class="contact-form" id="contact-form" novalidate>
+    <label>
+      <span data-es="Correo electrónico" data-en="Email">Correo electrónico</span>
+      <input type="email" name="email" required autocomplete="email">
+    </label>
+    <label>
+      <span data-es="Mensaje" data-en="Message">Mensaje</span>
+      <textarea name="message" required minlength="5" maxlength="1000"></textarea>
+    </label>
+    <div class="form-status" id="contact-status" role="status"></div>
+    <button type="submit" class="btn btn-primary" data-es="Enviar" data-en="Send">Enviar</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <span data-es="WEBFISHER - Un juego de pesca relajante y social" data-en="WEBFISHER - A relaxing, social fishing game">WEBFISHER - Un juego de pesca relajante y social</span>
+  <div class="footer-links">
+    <a href="/privacy.html" data-es="Privacidad" data-en="Privacy">Privacidad</a>
+    <a href="/terms.html" data-es="Términos" data-en="Terms">Términos</a>
+    <a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+  </div>
+  <div class="dev" data-es="Desarrollado por lamedeveloper" data-en="Developed by lamedeveloper">Desarrollado por lamedeveloper</div>
+</footer>
+
+<script defer src="/_vercel/insights/script.js"></script>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — WebFisher</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/png" href="/logo.png">
+</head>
+<body class="dash-body">
+
+<header class="site-header dash-header">
+  <a href="/" class="logo"><div class="logo-icon"><img src="/logo.png" alt="WebFisher"></div><span class="logo-text">Dashboard</span></a>
+  <div class="header-right">
+    <span class="wf-dash-username" id="dash-username"></span>
+    <div class="lang" id="lang-toggle" role="button" tabindex="0" aria-label="Cambiar idioma">
+      <strong id="lang-label">ES</strong>
+    </div>
+    <button type="button" class="btn btn-ghost" id="dash-logout" data-es="Cerrar sesión" data-en="Log out">Cerrar sesión</button>
+  </div>
+</header>
+
+<nav class="wf-tabbar" role="tablist" aria-label="Secciones del dashboard">
+  <button type="button" class="wf-tab-btn" data-tab="overview" role="tab">👤 <span data-es="Vista General" data-en="Overview">Vista General</span></button>
+  <button type="button" class="wf-tab-btn" data-tab="fishdex" role="tab">🐟 <span data-es="Fishdex" data-en="Fishdex">Fishdex</span></button>
+  <button type="button" class="wf-tab-btn" data-tab="gallery" role="tab">🖼️ <span data-es="Galería" data-en="Gallery">Galería</span></button>
+  <button type="button" class="wf-tab-btn" data-tab="ranking" role="tab">🏆 <span data-es="Ranking" data-en="Ranking">Ranking</span></button>
+  <button type="button" class="wf-tab-btn" data-tab="settings" role="tab">⚙️ <span data-es="Ajustes" data-en="Settings">Ajustes</span></button>
+</nav>
+
+<main class="dash-main" id="dash-outlet">
+  <div class="wf-loading"><span class="wf-spinner"></span><span>Cargando…</span></div>
+</main>
+
+<script type="module" src="/src/dashboard.js"></script>
+</body>
+</html>

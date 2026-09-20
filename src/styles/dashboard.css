@@ -1,0 +1,221 @@
+:root{
+  --neon: #00f2fe;
+  --neon-dim: rgba(0,242,254,0.15);
+  --rarity-common: #9ca8a5;
+  --rarity-uncommon: #22c55e;
+  --rarity-epic: #a855f7;
+  --rarity-unknown: #3a4a48;
+}
+
+.dash-body{
+  min-height:100vh;
+  background:
+    linear-gradient(180deg, rgba(3,6,9,.94) 0%, rgba(3,6,9,.88) 40%, rgba(3,6,9,.97) 100%),
+    url('/fishing-zone-bg.jpg') center 30% / cover no-repeat fixed;
+}
+@media(max-width:700px){
+  .dash-body{background-attachment:scroll;}
+}
+
+.dash-header{border-bottom:1px solid var(--border);}
+.wf-dash-username{font-size:14px;font-weight:600;color:var(--muted);padding:8px 16px;background:var(--bg-panel);border:1px solid var(--border);border-radius:20px;}
+
+/* Tab bar */
+.wf-tabbar{
+  display:flex;gap:10px;overflow-x:auto;
+  padding:16px 40px;
+  background:var(--header-bg);
+  border-bottom:1px solid var(--border);
+  position:sticky;top:85px;z-index:15;
+}
+@media(max-width:700px){.wf-tabbar{padding:12px 16px;top:73px;}}
+.wf-tab-btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:13px 22px;border-radius:12px;
+  background:transparent;border:1px solid transparent;
+  color:var(--muted);font-size:15.5px;font-weight:700;
+  cursor:pointer;white-space:nowrap;
+  transition:color .15s ease,border-color .15s ease,background .15s ease,transform .15s ease;
+}
+.wf-tab-btn:hover{color:var(--text);background:rgba(255,255,255,.04);}
+.wf-tab-btn.active{
+  color:var(--neon);
+  border-color:var(--neon);
+  background:var(--neon-dim);
+  box-shadow:0 0 16px rgba(0,242,254,.25);
+}
+
+.dash-main{max-width:1200px;margin:0 auto;padding:36px 40px 64px;}
+@media(max-width:700px){.dash-main{padding:24px 16px 48px;}}
+
+.dash-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+@media(max-width:900px){.dash-grid{grid-template-columns:1fr;}}
+
+.dash-card{
+  background:var(--bg-panel);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:26px;
+  box-shadow:0 8px 24px rgba(0,0,0,.18);
+  transition:border-color .18s ease;
+}
+.dash-card-title{font-size:16.5px;font-weight:700;margin-bottom:16px;display:flex;align-items:center;gap:9px;}
+.wf-muted{color:var(--muted);font-size:13.5px;line-height:1.6;}
+
+/* Loading state */
+.wf-loading{display:flex;align-items:center;gap:12px;color:var(--muted);padding:60px 0;justify-content:center;font-size:14px;}
+.wf-spinner{width:22px;height:22px;border-radius:50%;border:3px solid var(--border);border-top-color:var(--neon);animation:wf-spin .7s linear infinite;}
+@keyframes wf-spin{to{transform:rotate(360deg);}}
+
+/* Profile card */
+.wf-profile-card{grid-column:1/-1;display:flex;align-items:center;gap:24px;flex-wrap:wrap;border-color:var(--neon);box-shadow:0 0 24px rgba(0,242,254,.08);}
+.wf-profile-avatar{
+  width:84px;height:84px;border-radius:50%;
+  background:var(--neon-dim);border:2px solid var(--neon);
+  display:flex;align-items:center;justify-content:center;
+  font-size:40px;flex-shrink:0;
+}
+.wf-profile-card h2{font-size:22px;margin-bottom:4px;}
+.wf-profile-stats{display:flex;gap:18px;margin-top:10px;font-size:13.5px;flex-wrap:wrap;}
+.wf-profile-stats strong{color:var(--neon);}
+
+/* Achievements */
+.wf-achv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:600px){.wf-achv-grid{grid-template-columns:1fr 1fr;}}
+.wf-achv{
+  display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;
+  padding:16px 10px;border-radius:12px;border:1px solid var(--border);
+  background:rgba(255,255,255,.02);
+}
+.wf-achv.unlocked{border-color:var(--neon);box-shadow:0 0 10px rgba(0,242,254,.15);}
+.wf-achv.locked{opacity:.55;}
+.wf-achv-icon{font-size:26px;}
+.wf-achv-name{font-size:11.5px;color:var(--muted);}
+.wf-achv.unlocked .wf-achv-name{color:var(--text);}
+
+/* Promo banner */
+.wf-promo-banner{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:14px;
+  background:linear-gradient(135deg, rgba(0,242,254,.10), rgba(45,212,191,.05));
+  border-color:var(--neon);
+}
+.wf-promo-banner h3{margin-bottom:4px;font-size:17px;}
+.wf-promo-banner .btn{align-self:flex-start;}
+
+.wf-zone-card{
+  grid-column:1/-1;
+  position:relative;
+  overflow:hidden;
+  min-height:220px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background:
+    linear-gradient(180deg, rgba(5,10,12,.25) 0%, rgba(4,8,10,.55) 55%, rgba(3,6,7,.92) 100%),
+    url('/fishing-zone-bg.jpg') center 35% / cover no-repeat;
+  border-color:var(--border);
+}
+.wf-zone-card .dash-card-title{margin-bottom:8px;text-shadow:0 2px 10px rgba(0,0,0,.6);}
+.wf-zone-card .wf-muted{color:#dfe8e6;max-width:520px;text-shadow:0 1px 6px rgba(0,0,0,.5);}
+.wf-zone-card .btn{margin-top:16px;align-self:flex-start;}
+@media(max-width:600px){.wf-zone-card{min-height:190px;padding:22px;}}
+
+/* Fishdex */
+.wf-fishdex-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px;}
+.wf-fishdex-head .dash-card-title{margin-bottom:0;}
+.wf-fishdex-progress{font-size:12.5px;font-weight:700;color:var(--neon);background:var(--neon-dim);padding:5px 12px;border-radius:20px;white-space:nowrap;}
+
+.wf-search-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px;}
+.wf-search-input{
+  flex:1;background:var(--bg);border:1px solid var(--border);border-radius:10px;
+  padding:12px 16px;color:var(--text);font-size:14px;
+  transition:border-color .15s ease;
+}
+.wf-search-input:focus{outline:2px solid var(--neon);outline-offset:1px;border-color:var(--neon);}
+.wf-fishdex-count{font-size:12.5px;color:var(--muted);white-space:nowrap;}
+
+.wf-fish-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+.wf-fish-card{
+  display:flex;flex-direction:column;align-items:flex-start;gap:10px;text-align:left;
+  padding:20px;border-radius:16px;border:1px solid var(--border);
+  background:rgba(255,255,255,.025);
+  transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease;
+}
+.wf-fish-card:not(.locked):hover{transform:translateY(-4px);}
+.wf-fish-card.wf-hidden{display:none;}
+.wf-fish-icon{
+  font-size:26px;width:48px;height:48px;border-radius:12px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,255,255,.04);
+}
+.wf-fish-name{font-size:15px;font-weight:700;}
+.wf-fish-rarity{font-size:10.5px;font-weight:700;letter-spacing:.5px;padding:3px 10px;border-radius:20px;display:inline-block;}
+.wf-fish-desc{font-size:12.5px;color:var(--muted);line-height:1.55;margin-top:-2px;}
+
+.wf-fish-card.rarity-common{border-color:var(--rarity-common);}
+.wf-fish-card.rarity-common .wf-fish-icon{background:rgba(156,168,165,.14);}
+.wf-fish-card.rarity-common .wf-fish-rarity{color:var(--rarity-common);background:rgba(156,168,165,.12);}
+.wf-fish-card.rarity-uncommon{border-color:var(--rarity-uncommon);}
+.wf-fish-card.rarity-uncommon .wf-fish-icon{background:rgba(34,197,94,.14);}
+.wf-fish-card.rarity-uncommon .wf-fish-rarity{color:var(--rarity-uncommon);background:rgba(34,197,94,.12);}
+.wf-fish-card.rarity-uncommon:hover{box-shadow:0 0 14px rgba(34,197,94,.18);}
+.wf-fish-card.rarity-epic{border-color:var(--rarity-epic);box-shadow:0 0 12px rgba(168,85,247,.2);}
+.wf-fish-card.rarity-epic .wf-fish-icon{background:rgba(168,85,247,.14);}
+.wf-fish-card.rarity-epic .wf-fish-rarity{color:var(--rarity-epic);background:rgba(168,85,247,.12);}
+.wf-fish-card.locked{
+  opacity:.55;border-style:dashed;border-color:var(--rarity-unknown);
+  align-items:center;text-align:center;
+}
+.wf-fish-card.locked .wf-fish-icon{background:rgba(255,255,255,.03);color:var(--muted);}
+.wf-fish-card.locked .wf-fish-rarity{color:var(--muted);background:rgba(255,255,255,.04);}
+.wf-fish-card.locked:hover{opacity:.75;}
+
+/* Ranking */
+.wf-leaderboard-head{
+  display:grid;grid-template-columns:40px 32px 1fr auto auto;align-items:center;gap:14px;
+  padding:0 16px 10px;font-size:11px;font-weight:700;letter-spacing:.6px;
+  text-transform:uppercase;color:var(--muted);
+}
+.wf-leaderboard{
+  display:flex;flex-direction:column;gap:10px;
+  max-height:640px;overflow-y:auto;padding-right:4px;
+}
+.wf-leaderboard::-webkit-scrollbar{width:8px;}
+.wf-leaderboard::-webkit-scrollbar-track{background:transparent;}
+.wf-leaderboard::-webkit-scrollbar-thumb{background:var(--border);border-radius:8px;}
+.wf-leaderboard::-webkit-scrollbar-thumb:hover{background:var(--neon-dim);}
+.wf-rank-row{
+  display:grid;grid-template-columns:40px 32px 1fr auto auto;align-items:center;gap:14px;
+  padding:12px 16px;border-radius:12px;border:1px solid var(--border);background:rgba(255,255,255,.02);
+  transition:border-color .15s ease,background .15s ease;
+}
+.wf-rank-row:hover{border-color:rgba(0,242,254,.3);background:rgba(255,255,255,.035);}
+.wf-rank-row.podium{border-color:var(--neon);box-shadow:0 0 10px rgba(0,242,254,.12);background:var(--neon-dim);}
+.wf-rank-pos{font-weight:800;font-size:15px;text-align:center;}
+.wf-rank-avatar{font-size:22px;text-align:center;}
+.wf-rank-name{font-weight:600;}
+.wf-rank-fav{font-size:12px;color:var(--muted);}
+.wf-rank-catches{font-size:12.5px;color:var(--neon);font-weight:700;white-space:nowrap;}
+@media(max-width:640px){
+  .wf-leaderboard-head{display:none;}
+  .wf-rank-row{grid-template-columns:32px 26px 1fr;row-gap:4px;}
+  .wf-rank-fav,.wf-rank-catches{grid-column:3;font-size:11px;}
+}
+
+/* Settings */
+.wf-settings-form{display:flex;flex-direction:column;gap:14px;}
+.wf-settings-form select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:10px 12px;color:var(--text);font-size:14px;}
+.wf-field-label{font-size:13px;color:var(--muted);}
+.wf-avatar-picker{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;}
+@media(max-width:480px){.wf-avatar-picker{grid-template-columns:repeat(4,1fr);}}
+.wf-avatar-option{
+  aspect-ratio:1;border-radius:12px;background:var(--bg);border:1px solid var(--border);
+  font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;
+  transition:border-color .15s ease,transform .15s ease;
+}
+.wf-avatar-option:hover{transform:translateY(-2px);}
+.wf-avatar-option.selected{border-color:var(--neon);box-shadow:0 0 12px rgba(0,242,254,.3);}
+
+/* Gallery */
+.wf-gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;}
+.wf-gallery-item{border-radius:14px;overflow:hidden;border:1px solid var(--border);aspect-ratio:16/10;}
+.wf-gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease;}
+.wf-gallery-item:hover img{transform:scale(1.05);}
